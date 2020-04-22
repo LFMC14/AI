@@ -1,7 +1,7 @@
 ; Developed by:
 ; Taha Hasan Syed
 ; Kyle Truong
-; 
+; Luis Magana
 
 
 ; Set values for actions based on index
@@ -57,7 +57,7 @@
 
 ;test cases to check if functions work
 ;test cases will be removed later as it is not a requirement in the assignment
-(write-line "Testing terminal-test function")
+(write-line "Testing TERMINAL-TEST function")
 (write-line "Terminal state: if a list contains no b's")
 (write-line "Is the list(a b b) a terminal state?" )
 (write (terminal-test (list 'a 'b 'b)))
@@ -66,7 +66,7 @@
 (write (terminal-test (list 'a 'a 'a)))
 (terpri)
 (terpri)
-(write-line "Testing utility function")
+(write-line "Testing UTILITY function")
 (write-line "List containing all a's:")
 (write (utility (list 'a 'a 'a)))        
 (terpri)

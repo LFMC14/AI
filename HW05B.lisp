@@ -56,7 +56,6 @@
 
 
 ;test cases to check if functions work
-;test cases will be removed later as it is not a requirement in the assignment
 (write-line "Testing TERMINAL-TEST function")
 (write-line "Terminal state: if a list contains no b's")
 (write-line "Is the list(a b b) a terminal state?" )

@@ -22,9 +22,6 @@ public:
 	bool visited(State* state); // checks if state has already been seen
 	void ACTIONS(State* node);
 	State* move(State* parent, short int cann, short int miss, short int boat);
-	//State* fromRight(State* parent, short int cann, short int miss);
-	//State* fromLeft(State* parent, short int cann, short int miss);
-	//State CHILDNODE(State curr, short int action);
 	bool GOALTEST(State* current); // checks if state is goal state
 	void SOLUTION(State* state); // prints solution
 private:
@@ -148,52 +145,6 @@ inline State* Game::move(State* parent, short int cann, short int miss, short in
 		return nullptr;
 	}
 }
-
-/*inline State* Game::fromRight(State* parent, short int cann, short int miss)
-{
-	State* child = new State;
-
-	child->leftSide[0] = parent->leftSide[0] + cann;
-	child->leftSide[1] = parent->leftSide[1] + miss;
-	child->rightSide[0] = parent->rightSide[0] - cann;
-	child->rightSide[1] = parent->rightSide[1] - miss;
-	child->boat = false;
-
-	if (validState(child->leftSide, child->rightSide)) {
-		child->action[0] = cann;
-		child->action[1] = miss;
-		child->action[2] = false;
-		child->parent = parent;
-		return child;
-	}
-	else {
-		delete child;
-		return nullptr;
-	}
-}
-
-inline State* Game::fromLeft(State* parent, short int cann, short int miss)
-{
-	State* child = new State;
-
-	child->leftSide[0] = parent->leftSide[0] - cann;
-	child->leftSide[1] = parent->leftSide[1] - miss;
-	child->rightSide[0] = parent->rightSide[0] + cann;
-	child->rightSide[1] = parent->rightSide[1] + miss;
-	child->boat = true;
-
-	if (validState(child->leftSide, child->rightSide)) {
-		child->action[0] = cann;
-		child->action[1] = miss;
-		child->action[2] = true;
-		child->parent = parent;
-		return child;
-	}
-	else {
-		delete child;
-		return nullptr;
-	}
-}*/
 
 inline bool Game::GOALTEST(State* current)
 {
